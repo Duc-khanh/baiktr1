@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="" id="masv">
+    <button onclick="masinhvien()"> kiểm Tra </button>
+
+    <script>
+        function masinhvien() {
+            var num = +document.getElementById('masv').value;
+            var num1 = true;
+
+            if (num < 2) {
+                num1 = false;
+            }
+            else {
+                for (var i = 2; i <num - 1; i++) {
+                    if (num % i == 0) {
+                        num1 = false;
+                        break;
+                    }
+                }
+                if (num1 == true) {
+                    document.write(num + " : là số nguyên tố ")
+                }
+                else {
+                    document.write(num + " : không phải là số nguyên tố ")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

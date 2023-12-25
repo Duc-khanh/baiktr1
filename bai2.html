@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="ngay">
+    <button onclick="num()">xem ngày</button>
+    <script>
+        var num1 = []
+        var num2 = []
+
+        function num() {
+            var a = + document.getElementById('ngay').value
+            if (a < 32) {
+                for (i = 0; i <= a; i++) {
+                    if (i % 2 == 0) {
+                        num1.push(i);
+                    } else {
+                        num2.push(i);
+                    }
+                }
+                if (a % 2 == 0) {
+                    document.write(num1)
+                } else {
+                    document.write(num2)
+                }
+            } else {
+                alert('')
+            }
+        }
+    </script>
+</body>
+
+</html>
